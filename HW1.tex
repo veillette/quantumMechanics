@@ -1,0 +1,170 @@
+\documentclass[11pt]{article}
+
+\usepackage[dvips]{graphicx}
+\usepackage[rflt]{floatflt}
+\usepackage{amsmath,amsthm,amssymb}
+
+\renewcommand{\baselinestretch}{1.0}
+\parindent0em
+\parskip1.5ex plus0.5ex minus0.5ex
+\topmargin-0.8cm
+\oddsidemargin0.2cm
+\textwidth16cm
+\textheight22cm
+\setlength{\unitlength}{1cm}
+%
+\begin{document}
+\thispagestyle{empty}
+
+
+\centerline{\bf PHY 482,  HW\#1}
+
+\begin{itemize}
+%
+\item[1.] Superposition of stationary states\\
+The normalized state of a system is given by a superposition of stationary states as:
+\begin{equation}
+\Psi(x,t) = \sum\limits_{n=1}^{\infty} c_n \chi_n(x) \exp(-iE_nt)
+\end{equation}
+Show that from the normalization of $\Psi(x,t)$ follows that
+\begin{equation}
+\sum\limits_{n=1}^{\infty} |c_n|^2 = 1
+\end{equation}
+Give a physical interpretation of Eq.\ (2).
+%
+\vspace*{0.25cm}
+%
+\item[2.] Energy measurement I\\
+A system is initially in the state
+\begin{displaymath}
+\Psi(x,t=0) =
+\frac{1}{\sqrt{7}}\left(
+\sqrt{2}\chi_1(x)
++\sqrt{3}\chi_2(x)
+-i\chi_3(x)
++\chi_4(x)
+\right)
+\end{displaymath}
+where $\chi_n(x)$ are eigenstates of the system's Hamiltonian such that ${\hat H}\chi_n(x)=n^2 E_0\chi_n(x)$
+\begin{itemize}
+\item[a)]
+Is $\Psi(x,t)$ normalized for $t>0$?
+\item[b)]
+If the energy of state is measured, what values will be obtained and with what probabilities?
+\item[c)]
+Calculate the expectation value of the total energy of the system.
+\item[d)]
+Suppose that a measurement yields $4E_0$, write down the wave function immediately after the measurement.
+\end{itemize}
+%
+\vspace*{0.25cm}
+%
+\item[3.] Energy measurement II\\
+Consider a particle in an (1D) infinite square well of width $a$. The normalized energy eigenstates of this system are given by \begin{displaymath}
+\Psi_n(x,t=0) = \sqrt{\frac{2}{a}} \sin\left(\frac{n\pi x}{a}\right)
+\end{displaymath}
+and the corresponding energy eigenvalues are given by $E_n =\frac{n^2\pi^2\hbar^2}{2ma^2}$.
+\\ \\
+%
+\centerline{- Problem continues on the back -}
+\newpage
+%
+Suppose that the wave function of the particle at time $t=0$ is given by
+\begin{displaymath}
+\Psi(x,t=0) =
+\begin{cases}
+A\frac{x}{a}, &\mbox{if}\quad 0\le x\le \frac{a}{2}\\
+A\left(1-\frac{x}{a}\right), &\mbox{if}\quad \frac{a}{2} < x \le a\\
+0, &\mbox{else}
+\end{cases}
+\end{displaymath}
+where $A = \sqrt{\frac{12}{a}}$ such that $\int\limits_{-\infty}^{\infty} |\Psi(x,t=0)|^2 dx = 1$. Calculate the probability that the measurement of the energy yields the eigenvalue $E_3$.\\
+{\it (Hint: Problem 1b) and its solution should be useful here.)}
+%
+\vspace*{0.25cm}
+%
+
+%
+\item[4.] Some quantitative problems for a potential step
+\begin{itemize}
+%
+\item[a)]
+An electron with a kinetic energy of 10 eV at large negative values of $x$ is moving from left to right
+along the $x$-axis. The potential energy is given by:
+\begin{displaymath}
+V(x) =
+\begin{cases}
+0 &x<0\\
+20 \mbox{eV}, &x \ge 0
+\end{cases}
+\end{displaymath}
+Let's define a penetration depth $\Delta x > 0$ such that $|\chi(x=\Delta x)|^2 = |\chi(x=0)|^2/e^2$. Calculate the penetration depth for the electron.
+\item[b)]
+Repeat part a) for a 70 kg person initially moving at 4 ms$^{-1}$ and running into a wall which can be represented
+by a potential step of height equal to four times this person's kinetic energy before reaching the step.
+\end{itemize}
+%
+\vspace*{0.5cm}
+%
+\item[5.] Scattering by a potential well\\
+Consider the case of a particle beam which comes in from the left with $E>0$ and scatters of the potential
+\begin{displaymath}
+V(x) =
+\begin{cases}
+0, &x < 0\\
+-V_0&0 < x < a\\
+0, &a < x
+\end{cases}
+\end{displaymath}
+with $V_0>0$ (note the minus sign in front of $V_0$ in the formula).
+\begin{itemize}
+\item[a)]
+Write down the wave function in each region and give the wave numbers in your general solutions as functions of $E$ and $V_0$.
+\item[b)]
+Write down the appropriate boundary conditions using the wave functions you have determined and justify any terms in your general solutions you set to zero.
+\item[c)]
+The transmission coefficient for particles coming from the left to be transmitted to $x \rightarrow \infty$ is given by
+\begin{displaymath}
+T^{-1} = 1 + \frac{1}{4\frac{E}{V_0}\left(1+\frac{E}{V_0}\right)}\sin^2\left(\frac{a}{\hbar}\sqrt{2m(V_0+E)}\right)
+\end{displaymath}
+Determine $T$ for the limiting cases $E \rightarrow 0$ and $E \rightarrow \infty$.
+\item[d)]
+Consider the case where $E = V_0$. Determine $T$ at three different values of the parameters:
+$V_0 \rightarrow 0$, $a^2mV_0/\hbar^2 = \pi^2/16$, $a^2mV_0/\hbar^2 = \pi^2/4$.
+How does this compare to your classical expectation?
+\end{itemize}
+%
+%
+\item[6.] Scattering by a potential barrier\\
+Consider now a potential with a barrier of height $V_0$
+\begin{displaymath}
+V(x) =
+\begin{cases}
+0, &x < 0\\
+V_0&0 < x < a\\
+0, &a < x
+\end{cases}
+\end{displaymath}
+\begin{itemize}
+\item[a)]
+Adapt the results from the previous problem to demonstrate that for $0<E<V_0$ the transmission coefficient is given by
+\begin{displaymath}
+T^{-1} = 1+\frac{1}{4(E/V_0)(1-E/V_0)}\sinh^2\left(\frac{a}{\hbar}\sqrt{2m(V_0-E)}\right)
+\end{displaymath}
+To do this, turn the barrier downside up by replacing $V_0$ with $-V_0$ in that formula,
+and obtain an expression for $T^{-1}$ where everything is real. It may help to know
+that $\sinh(ix) = i \sin x$.
+\item[b)]
+Consider this system as a model of a baseball being thrown at a wall. A baseball has a
+mass of about 150 g, and we take it to be thrown at 40 m/s (near 90 mph). Assume that the wall is
+0.1 m thick, and let's make the approximation that the ball would have to be 5 times as energetic
+to punch through the wall classically, so $V_0 = 5E$ with $E$ determined by the quantities above.\\
+What is the order of magnitude for $T$? Let's put this into perspective: if you keep trying, tossing
+a baseball at the wall once per second, roughly how long do you have to wait until it "pops through"
+the wall quantum mechanically? Give your answer in seconds, and also in ages of the Universe
+(current models show the Universe to be about 13.7 billion years old), and comment on your results.
+\end{itemize}
+
+\end{itemize}
+\end{document}
+

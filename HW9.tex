@@ -1,0 +1,117 @@
+\documentclass[11pt]{article}
+
+\usepackage[dvips]{graphicx}
+\usepackage[rflt]{floatflt}
+\usepackage{amsmath,amsthm,amssymb}
+
+\renewcommand{\baselinestretch}{1.0}
+\parindent0em
+\parskip1.5ex plus0.5ex minus0.5ex
+\topmargin-0.8cm
+\oddsidemargin0.2cm
+\textwidth16cm
+\textheight22cm
+\setlength{\unitlength}{1cm}
+%
+\begin{document}
+\thispagestyle{empty}
+
+\centerline{\bf PHY 482,  HW\#9}
+
+\begin{itemize}
+%
+\item[1.] Schwarz inequality\\
+Prove the Schwarz inequality
+\begin{displaymath}
+\langle A|A \rangle \langle B|B \rangle \ge |\langle A|B \rangle|^2
+\end{displaymath}
+(Hint: $Let |C> = |B> -\left(\frac{\langle A|B \rangle}{\langle A|A \rangle}\right) |A>$ and use the fact that for any
+vector, i.e.\ in particular also for the vector $|C>$ yields $<C|C> \ge 0$.)
+%
+\vspace*{1cm}
+%
+\item[2.] Useful properties of commutators (and anti-commutators)
+\begin{itemize}
+\item[a)]
+Assume ${\hat A}$ and ${\hat B}$ are Hermitian operators.
+Show that the commutator $[{\hat A};{\hat B}] = {\hat A}{\hat B} - {\hat B}{\hat A}$ is anti-Hermitian, that means
+$[{\hat A};{\hat B}] = -[{\hat A};{\hat B}]^{\dagger}$
+and that the anti-commutator $\{{\hat A};{\hat B}\} = {\hat A}{\hat B} + {\hat B}{\hat A}$ is Hermitian.
+\item[b)]
+Show that $[{\hat x}^n; {\hat p}] = i\hbar n{\hat x}^{n-1}$.
+\end{itemize}
+%
+\vspace*{1cm}
+%
+\item[3.] Uncertainty relation and time dependence of expectation values
+\begin{itemize}
+\item[a)]
+Show that the generalized uncertainty principle for the operator ${\hat x}$ and ${\hat H}$ yields
+\begin{displaymath}
+\sigma_x \sigma_H \ge \frac{\hbar}{2m}|<p>|
+\end{displaymath}
+What can you deduce about the value of $<p>$ in a stationary state?
+\item[b)]
+Use
+\begin{displaymath}
+\frac{d}{dt}<{\hat A}> = \frac{1}{i\hbar} <[{\hat A},{\hat H}]> + <\frac{\partial {\hat A}}{\partial t}>
+\end{displaymath}
+with ${\hat A} = {\hat I}$ (identity operator), ${\hat A} = {\hat H}$ and ${\hat A} = {\hat p}$ to prove
+the conservation of probability, the conservation of energy, and Ehrenfest's theorem, respectively.\\
+(Hints: (i) In this class we did not and we will not consider problems, in which the potential is time-dependent. Thus, 
+you can assume that $V(x,t) = V(x)$. (ii) In the last term of the right hand side ${\partial {\hat A}}/{\partial t}$ is the derivative of the {\it operator}, and only of the operator, with respect of time.)
+\end{itemize}
+%
+\vspace*{1cm}
+%
+\centerline{\bf - Please note: There is another problem on the next page -}
+\newpage
+%
+\item[4.] Matrix representation of the eigenvalue problem\\
+Suppose there are two observables $A$ and $B$ with corresponding Hermitian operators ${\hat A}$ and ${\hat B}$. The eigenfunctions to ${\hat A}$ as well as to ${\hat B}$ form a complete set of basis functions, and satisfy the eigenvalue equations:
+\begin{displaymath}
+{\hat A} |a_n> = a_n |a_n> \qquad \mbox{and} \qquad {\hat B} |b_n> = b_n |b_n>\, .
+\end{displaymath}
+(Here we are adopting a common practice of labeling an eigenstate by its eigenvalues, so $|a_n>$ is the eigenvector of ${\hat A}$ with eigenvalue $a_n$. Do not confuse the eigenvalues, which are numbers, with their eigenvectors, which are vectors in Hilbert space).
+\begin{itemize}
+\item[a)]
+Since the eigenfunctions form a complete set, any wavefunction $|\Psi(t)>$ can be written as an expansion in either basis (we assume for simplicity a discrete basis):
+\begin{displaymath}
+|\Psi (t)> = \sum\limits_{n} c_n(t) |a_n> = \sum\limits_{n} d_n(t) |b_n>
+\end{displaymath}
+Derive a formula that expresses any particular $d_n$ in terms of the set of $c_n$'s.
+\item[b)]
+Using the identity operator ${\hat I} = \sum\limits_i |b_i><b_i|$
+show that ${\hat A}$ can be written as:
+\begin{displaymath}
+{\hat A} = \sum\limits_j\sum\limits_i A_{ji}|b_j><b_i|
+\end{displaymath}
+with $A_{ji} = <b_j|{\hat A}|b_i>$ is the $ji$-th element of the matrix representing ${\hat A}$.
+\item[c)]
+Show that the eigenvalue equation ${\hat A} |a_n> = a_n |a_n>$
+can be written as
+\begin{equation}
+\sum\limits_i \left[A_{ji} - a_n \delta_{ij}\right] <b_i|a_n> = 0\, .
+\end{equation}
+\item[d)]
+Equation (1) has nonzero solutions only if the determinant
+\begin{displaymath}
+\det(A - a_n I) = 0\, ,
+\end{displaymath}
+where $A$ is the matrix representing the operator ${\hat A}$ and $I$ is the identity matrix.
+The solutions of this so-called secular or characteristic equation yield the eigenvalues $a_n$.\\
+Use this result to find the eigenvalues $a_n$ of
+\begin{displaymath}
+A =
+\begin{pmatrix}
+7 & 0 & 0 \\
+0 & 1 & -i \\
+0 & i & -1
+\end{pmatrix}
+\end{displaymath}
+Then, use the matrix representation of the eigenvalue equation to find the eigenvectors $|a_n>$ corresponding to the eigenvalues $a_n$. Make sure that the eigenvectors are normalized.
+\end{itemize}
+%
+\end{itemize}
+\end{document}
+

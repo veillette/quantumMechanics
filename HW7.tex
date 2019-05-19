@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+
+\usepackage[dvips]{graphicx}
+\usepackage[rflt]{floatflt}
+\usepackage{amsmath,amsthm,amssymb}
+
+\renewcommand{\baselinestretch}{1.0}
+\parindent0em
+\parskip1.5ex plus0.5ex minus0.5ex
+\topmargin-0.8cm
+\oddsidemargin0.2cm
+\textwidth16cm
+\textheight22cm
+\setlength{\unitlength}{1cm}
+%
+\begin{document}
+\thispagestyle{empty}
+
+\centerline{\bf PHY 482, Spring 14, HW\#7}
+
+\begin{itemize}
+%
+\item[1.] Symmetric potentials (Griffiths, Problem 2.1(c))\\
+Prove the following statement: If $V(x)$ is an even function (that is, $V(-x)=V(x)$), then the stationary state
+wave functions $\chi(x)$ can always be taken to be either even or odd.
+%
+\vspace*{0.5cm}
+%
+%\item[2.] Ground state energy of infinite square well\\
+%Calculate the uncertainty $\sigma_{p_n}=\sqrt{<p^2> - <p>^2}$ of the momentum of the particle in the $n$th state of the %infinite square well. Then use the result to estimate the ground state energy as $E_1 \approx \sigma_{p_1}^2/(2m)$. Compare %with the exact result.
+%
+%\vspace*{0.5cm}
+%
+\item[2.] Attractive delta potential\\
+Consider a particle of mass $m$ subject to an attractive delta potential $V(x) = -V_0 \delta(x)$, where $V_0 > 0$.
+Show that this particle has only one bound state. Find the energy and the wave function of the state.
+%
+\vspace*{0.5cm}
+%
+\item[3.] An expanding infinite square well\\
+Consider a particle of mass $m$ in an infinite square well, that extends from 0 to $a$. Assume that the particle is in the ground state of the square well for $t<0$. At $t=0$ the size of the square well is suddenly expanded, so that it extends
+from 0 to $2a$ leaving the wave function of the state undisturbed.
+\begin{itemize}
+\item[a)]
+Write down the wave function $\Psi(x,t=0)$ in the new larger well (Think carefully about the different regions in the new well).
+\item[b)]
+The wave function $\Psi(x,t=0)$ can be expanded as a linear combination of the stationary states, $\chi_n(x)$, of the new larger well, i.e. $\Psi(x,t=0) = \sum\limits_{n=1}^\infty c_n \chi_n(x)$. Determine a formula for $c_n$ and show by summing the first terms that the sum over $|c_n|^2$ is approaching 1. Does this make sense? Explain.
+\item[c)]
+Assume that the energy of the particle is measured at some time $t > 0$. What is the expectation value $<E>$ of the energy? What is the probability that the energy of the first excited state ($n=2$) of the new well is measured?
+\item[d)]
+Calculate the smallest period of time, $\tau > 0$, at which $\Psi(x,\tau)$ = $\Psi(x,t=0)$.
+\item[e)]
+Draw a picture of $\Psi(x,t)$ at $t=\tau/2$.
+\end{itemize}
+%
+\vspace*{0.5cm}
+%
+\centerline{\bf - There is another problem on the back - }
+%
+\newpage
+%
+\item[4.] Coherent states for the harmonic oscillator\\
+In a harmonic oscillator a coherent state $\psi_\alpha(x)$ is defined as follows: When acted on by the lowering operator ${\hat a}_-$, we get the wave function back times a constant:
+\begin{eqnarray}
+\label{Eig}
+{\hat a}_- \psi_\alpha (x) = \alpha \, \psi_\alpha(x) \,,
+\end{eqnarray}
+or in linear algebra language, $\psi_\alpha(x)$ is an eigenvector of ${\hat a}_-$ with eigenvalue $\alpha$.
+Different coherent states have different values of $\alpha$.  Do {\em not} in general assume that the constant $\alpha$ is real.\\
+({\em Coherent states have many applications in atomic, molecular, and optical physics.  For instance, lasers and Bose-Einstein condensates are examples of coherent states.})
+%
+\begin{itemize}
+\item[a)]
+Show that for any square-integrable functions $f(x)$ and $g(x)$
+\begin{eqnarray}
+\int\limits_{-\infty}^{\infty} f^*(x) ({\hat a}_{\pm} g(x)) dx
+=  \int\limits_{-\infty}^{\infty} ({\hat a}_{\mp} f(x))^* g(x)) dx
+\end{eqnarray}
+\item[b)]
+Use Eq.\ (2)
+along with the eigenvector equation (\ref{Eig}) to evaluate $\langle x \rangle$ and $\langle p \rangle$ for the coherent state wave function $\psi_\alpha$ in terms of $\alpha$ and constants.  You may assume $\psi_\alpha(x)$ is normalized.
+%OD
+(Hint: How can $\hat{x}$ and $\hat{p}$ be written in terms of $a_+$ and $a_-$?)
+\item[c)]
+Is the ground state $\chi_0(x)$ of the harmonic oscillator a coherent state?  What is the value of $\alpha$?
+\item[d)]
+Any wave function of the harmonic oscillator can be expressed as a linear combination of
+stationary states $\chi_n(x)$ of the harmonic oscillator. Assume therefore that
+\begin{eqnarray}
+\psi_\alpha(x) = \sum_{n=0}^\infty c_n \chi_n(x) \,,
+\end{eqnarray}
+and show that the $c_n$ are given by
+\begin{eqnarray}
+c_n = {\alpha^n \over \sqrt{n!}} \, c_0 \,.
+\end{eqnarray}
+(Hint: Operate with ${\hat a}_-$ on Eq.\ (3).)
+\item[e)]
+Another interesting property of coherent states is how their expectation values evolve in time.  Recall that stationary states have time-independent expectation values; coherent states are different.
+Assume that $\Psi_\alpha(x, t=0) = \psi_\alpha(x)$ and show that $\Psi_\alpha(x,t)$ is still a coherent state --- that is, show it satisfies
+\begin{eqnarray}
+{\hat a}_- \Psi_\alpha (x,t ) = \alpha(t) \Psi_\alpha(x,t) \,.
+\end{eqnarray}
+What is $\alpha(t)$ in terms of $\alpha$ and other quantities?
+\item[f)]
+In this part, for simplicity assume $\alpha$ is real (but $\alpha(t)$ might not be real).  Take the results for $\langle x \rangle$ and $\langle p \rangle$ from part b) and put the value of $\alpha(t)$ into them to find $\langle x \rangle(t)$ and $\langle p \rangle (t)$  for $\Psi_\alpha(x,t)$.   How does the result compare to the classical motion of a particle in a harmonic oscillator?
+\end{itemize}
+\end{itemize}
+\end{document}
+

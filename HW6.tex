@@ -1,0 +1,95 @@
+\documentclass[11pt]{article}
+
+\usepackage[dvips]{graphicx}
+\usepackage[rflt]{floatflt}
+\usepackage{amsmath,amsthm,amssymb}
+
+\renewcommand{\baselinestretch}{1.0}
+\parindent0em
+\parskip1.5ex plus0.5ex minus0.5ex
+\topmargin-0.8cm
+\oddsidemargin0.2cm
+\textwidth16cm
+\textheight22cm
+\setlength{\unitlength}{1cm}
+%
+\begin{document}
+\thispagestyle{empty}
+
+
+\centerline{\bf PHY 482,  HW\#6}
+
+\begin{itemize}
+%
+\item[1.] An infinitely high potential step
+\begin{itemize}
+\item[a)]
+Start with the wave function derived in class for a potential step of finite height ($E<V_0$):
+\begin{displaymath}
+\chi(x) =
+\begin{cases}
+A_1\left(\exp(ikx) + \frac{1-i\left(\frac{V_0}{E}-1\right)^{1/2}}{1+i\left(\frac{V_0}{E}-1\right)^{1/2}}\exp(-ikx)\right) &x<0\\
+\frac{2A_1}{1+i\left(\frac{V_0}{E}-1\right)^{1/2}}\exp(-\kappa x), &x \ge 0
+\end{cases}
+\end{displaymath}
+with $k = \sqrt{2mE/\hbar^2}$ and $\kappa = \sqrt{2m(V_0-E)/\hbar^2}$
+to find the wave function in both regions for the limiting case $V_0 \rightarrow \infty$.\\
+({\it Hints: I suggest to think for moment what you expect as solutions in both regions before you start the calculation. In the calculation is may be useful to separate the nominator and denominator of the prefactor of the reflected wave in real and imaginary parts.})
+\item[b)] For the limiting case studied in part a): Are the wave function and its first derivative continuous at the boundary $x=0$? Explain your result.
+\end{itemize}
+%
+\vspace*{0.5cm}
+%
+\item[2.] Reflection and transmission coefficients\\
+In class we have argued that $R + T = 1$, where $R$ is the reflection and $T$ is the transmission coefficient, respectively. This can be shown using the continuity equation:
+\begin{displaymath}
+\frac{\partial J(x,t)}{\partial x} = -\frac{\partial |\Psi(x,t)|^2}{\partial t}
+\end{displaymath}
+(Note that the continuity equation involves $\Psi(x,t)$ not $\chi(x)$.)\\
+To do so:
+\begin{itemize}
+\item[a)] Show (or argue) that the right hand side of the continuity equation equals zero for all scenarios studied in class (i.e.\ $E<V_0$ and $E>V_0$, all regions of the potential step and potential barrier problems).
+\item[b)] Next, show that $J(x = \infty) - J(x = -\infty) = 0$.
+\item[c)] Write $J(x = \infty)$ and $J(x = -\infty)$ as functions of $J_{incident}$, $J_{reflected}$ and $J_{transmitted}$ and show $R+T=1$.
+\end{itemize}
+%
+\centerline{\bf - There is another problem on the back - }
+%
+\newpage
+%
+\item[3.] WKB approximation (cf.\ Griffiths, problem 8.2)\\
+The WKB approximation is also known as a semiclassical approximation. In order to better understand this, you will study in this problem an alternative derivation of the WKB solution. Start by writing the wave function as:
+\begin{displaymath}
+\Psi(x) = \exp(i(f(x)/\hbar))
+\end{displaymath}
+where $f(x)$ is a {\it complex} function. Note, that we can do this without any loss of generality.
+\begin{itemize}
+\item[a)]
+Substitute the above expression into the one-dimensional time-independent Schr\"odinger equation and show that
+\begin{displaymath}
+i\hbar \frac{d^2 f}{dx^2} - \left(\frac{d f}{d x}\right)^2 + p^2 = 0
+\end{displaymath}
+where $p(x) = \sqrt{2m[E-V(x)]}$
+\item[b)]
+The semiclassical approximation involves writing $f(x)$ as a power series in $\hbar$:
+\begin{displaymath}
+f(x) = f_0(x) + \hbar f_1(x) + \hbar^2 f_2(x) + \ldots
+\end{displaymath}
+Insert this expansion in the equation derived in part a). The resulting equation is satisfied, if the coefficient of each power in $\hbar$ vanishes separately. Show that this implies:
+\begin{eqnarray*}
+\left(\frac{d f_0}{d x}\right)^2 &=& p^2
+\\
+i\frac{d^2 f_0}{dx^2} &=& 2 \frac{d f_0}{d x}\frac{d f_1}{d x}
+\\
+i\frac{d^2 f_1}{dx^2} &=& 2 \frac{d f_0}{d x}\frac{d f_2}{d x} + \left(\frac{d f_1}{d x}\right)^2
+\end{eqnarray*}
+\item[c)]
+Solve the set of equations from part b) for $f_0(x)$ and $f_1(x)$, and show that up to the leading order in $\hbar$ you get the WKB solution:
+\begin{displaymath}
+\Psi(x) = \frac{C}{\sqrt{p(x)}} \exp\left({\pm \frac{i}{\hbar}\int p(x)dx}\right)
+\end{displaymath}
+\end{itemize}
+%
+\end{itemize}
+\end{document}
+

@@ -1,0 +1,99 @@
+\documentclass[11pt]{article}
+
+\usepackage[dvips]{graphicx}
+\usepackage[rflt]{floatflt}
+\usepackage{amsmath,amsthm,amssymb}
+
+\renewcommand{\baselinestretch}{1.0}
+\parindent0em
+\parskip1.5ex plus0.5ex minus0.5ex
+\topmargin-0.8cm
+\oddsidemargin0.2cm
+\textwidth16cm
+\textheight22cm
+\setlength{\unitlength}{1cm}
+%
+\begin{document}
+\thispagestyle{empty}
+
+\centerline{\bf PHY 482, HW\#11}
+
+%
+\vspace*{1cm}
+%
+In the final problem, we derive the analytic solution for the radial equation of hydrogen atom. This one of the most important derivations in quantum mechanics. Stationary states for the hydrogen atom that are also eigenstates of $L^2$ and $L_z$ take the form
+\begin{displaymath}
+\Psi_{nlm}(r,\theta,\phi) = R_{nl}(r) Y_{lm}(\theta,\phi) \equiv \frac{u_{nl}(r)}{r} Y_{lm}(\theta,\phi)
+\end{displaymath}
+where $u_{nl}(r)$ solve the radial equation
+\begin{equation}
+-\frac{\hbar^2}{2m_e}\frac{d^2u}{dr^2} + \left(-\frac{ke^2}{r}+\frac{\hbar^2}{2m_e}\frac{l(l+1)}{r^2}\right)u = Eu
+\end{equation}
+with $m_e$ is the mass of the electron and $k=1/(4\pi\epsilon_0)$.
+\begin{itemize}
+\item[a)]
+Divide Eq.\ (1) by $E$ and define a variable $\rho \equiv r/r'$, where $r'$ is for you to determine such that the
+first and the last term take the form
+\begin{equation}
+\frac{d^2u}{d\rho^2} + ... = u
+\end{equation}
+What is $r'$? What is the sign of $E$ appropriate to bound states, and given this, is $r'$ real and positive?
+Next find a constant $\rho_0$ such that Eq.\ (1) can be written as
+\begin{equation}
+\frac{d^2u}{d\rho^2} = \left[1 - \frac{\rho_0}{\rho} + \frac{l(l+1)}{\rho^2} \right]u
+\end{equation}
+\item[b)]
+Show that the asymptotic solution of Eq.\ (3) in the limit $r\rightarrow\infty$ can be written as:
+\begin{equation}
+u \approx A \exp(-\rho) + B \exp(+\rho)
+\end{equation}
+Which constraint do you have to put on $A$ and $B$ to make sure the wavefunction is normalizable.
+Now show that in the limit $r\rightarrow 0$ the radial equation becomes
+\begin{equation}
+\frac{d^2u}{d\rho^2} \approx \frac{l(l+1)}{\rho^2} u
+\end{equation}
+The solution of this equation is of the form $u(\rho) \approx C\rho^\alpha$. Which values for $\alpha$ satisfy the equation?
+Which one do we have to throw out to prevent the wavefunction from blowing up?
+\item[c)]
+We now extract {\it both} asymptotic behaviors from $u(\rho)$ by defining a new function $v(\rho)$ via:
+\begin{equation}
+u(\rho) \equiv \rho^{l+1} \exp(-\rho) v(\rho)
+\end{equation}
+Verify that the radial equation becomes, in terms of $v(\rho$):
+\begin{equation}
+\rho \frac{d^2v}{d\rho^2} + 2(l+1-\rho) \frac{dv}{d\rho} + [\rho_0-2(l+1)]v = 0
+\end{equation}
+\centerline{\bf - Problem continues on the next page -}
+\item[d)]
+To solve the differential equation (7), we will postulate a series for $v$:
+\begin{equation}
+v(\rho) = \sum\limits_{j=0}^{\infty} c_j\rho^j
+\end{equation}
+where $c_j$ are constants. Show that the result of part c) implies the following recursion relation for the constants:
+\begin{equation}
+c_{j+1} = \left[ \frac{2(j+l+1)-\rho_0}{(j+1)(j+2l+2)}\right]c_j
+\end{equation}
+\item[e)]
+Let us explore what happens if the series goes on forever. Write down the large $j$-limit of the recursion formula,
+and demonstrate that if this approximate form were exact, it would imply
+\begin{equation}
+c_j = \frac{2^j}{j!}c_0
+\end{equation}
+This is only approximately true but it captures the large $\rho$-behavior. Using this formula, sum up $v(\rho)$ explicitly;
+the series should be familiar. Given this estimate for $v(\rho)$ how does $u(\rho) = \rho^{l+1}\exp(-\rho)v(\rho)$ behave
+at large $\rho$? Is this acceptable, and why or why not?
+\item [f)]
+To ensure that we can normalize the wavefunction, the series must stop at some point. Assume that there exists a value of $j$
+called $j_{max}$ such that $c_{j_{max}} \ne 0$ but $c_{j_{max+1}} = 0$. Solve for the relation between $\rho_0$, $j_{max}$ and
+$l$ that this situation requires.
+\item[g)]
+Finally, defining $n=j_{max}+l+1$ for convenience and recalling the definition of $\rho_0$, find the allowed energies for the
+hydrogen atom, in terms of the quantities $\hbar$, $k$ and $m_e$ as well as $n$. For fixed $l$, what is the smallest possible
+value of $n$, if any? For fixed $l$ what is the largest possible value for $n$, if any? Explain.
+\end{itemize}
+
+The functions $v(\rho)$ can be expressed in terms of special functions called Laguerre polynomials; for more details, see Griffith's textbook. The constant $r'$ turns out to be proportional to $n$, and if this is extracted we are left with the Bohr radius 
+$a = r'/n$, which sets the length scale for atomic systems.
+
+\end{document}
+

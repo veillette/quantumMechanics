@@ -1,0 +1,133 @@
+\documentclass[11pt]{article}
+
+\usepackage[dvips]{graphicx}
+\usepackage[rflt]{floatflt}
+\usepackage{amsmath,amsthm,amssymb}
+
+\renewcommand{\baselinestretch}{1.0}
+\parindent0em
+\parskip1.5ex plus0.5ex minus0.5ex
+\topmargin-0.8cm
+\oddsidemargin0.2cm
+\textwidth16cm
+\textheight22cm
+\setlength{\unitlength}{1cm}
+%
+\begin{document}
+\thispagestyle{empty}
+
+\centerline{\bf PHY 482, HW\#3}
+
+\begin{itemize}
+%
+%\item[1.] Another wavefunction
+%\begin{displaymath}
+%\Psi(x,t=0) =
+%\begin{cases}
+%A(a^2-x^2), &\mbox{if}\quad -a\le x\le a\\
+%0, &\mbox{else}
+%\end{cases}
+%\end{displaymath}
+%where $a > 0$ is a real number.
+%\begin{itemize}
+%\item[a)] Determine $A$ such that $\Psi(x,t=0)$ is normalized.
+%\item[b)] At which $x$ does the probability density peak?
+%\item[c)] Calculate the expectation value of $p$ at $t=0$.
+%\end{itemize}
+%
+\vspace*{0.25cm}
+%
+\item[1.] Expectation values and operators
+\begin{itemize}
+\item[a)]
+Argue that for any observable $A$ we have to require
+\begin{equation}
+\langle A \rangle = \langle A \rangle^*.
+\end{equation}
+\item[b)]
+Show explicitly (by calculation) that the relation $\langle {\bf p} \rangle = \langle {\bf p} \rangle^*$ is fulfilled for the expectation value of the momentum.
+\item[c)]
+Prove the Ehrenfest theorem
+\begin{displaymath}
+\frac{d\langle p_x\rangle}{dt} = \left\langle -\frac{\partial V}{\partial x} \right\rangle
+\end{displaymath}
+where the potential $V$ is a real quantity.\\
+{\it Hint: Start on the left hand side and use the Schr\"odinger equation to show that
+\begin{eqnarray*}
+\frac{d\langle p_x\rangle}{dt} &=& \frac{\hbar^2}{2m}\int\limits \Psi^*\left(\nabla^2 \frac{\partial \Psi}{\partial x}\right)
+- \left(\nabla^2 \Psi^*\right)\frac{\partial \Psi}{\partial x} d{\bf r}
+\\
+&& - \int\limits \Psi^*\left[\frac{\partial (V\Psi)}{\partial x} - V \frac{\partial\Psi}{\partial x}\right]d{\bf r}\, .
+\end{eqnarray*}
+Next, show that the first integral on the right hand side in the above equation is zero. Finally, prove that the remaining second integral on the right hand side is equal to the right hand side in the Ehrenfest theorem.
+}
+\item[d)]
+The three expressions $xp_x$, $p_xx$ and $(xp_x+p_xx)/2$ are equivalent in classical mechanics. The corresponding
+quantum mechanical operators are $\hat X \hat P_x$, $\hat P_x \hat X$ and $(\hat X\hat P_x+\hat P_x\hat X)/2$.
+Show that Eq.\ (1) is fulfilled by one of these operators, but not by the other two operators.
+\item[e)]
+Consider a {\it time-independent} observable $A$ (the corresponding operator ${\hat A}$ is then time-independent too).
+Show that
+\begin{displaymath}
+i\hbar \frac{\partial}{\partial t}\langle A \rangle = \int \Psi^*({\bf r})\left[ {\hat A}, {\hat H}\right] \Psi({\bf r}) d{\bf r}
+\end{displaymath}
+where $\left[ {\hat A}, {\hat H}\right] = {\hat A}{\hat H} - {\hat H}{\hat A}$ is called the commutator of the operators ${\hat A}$ and ${\hat H}$.\\
+{\it Hint: Start again on the left hand side and use the Schr\"odinger equation.}
+\item[f)]
+The commutator of two quantum mechanical operators is not necessarily equal to zero. Show this by applying $[{\hat X},{\hat P_x}]$ to a wave function $\Psi(x,t)$. Study the general case not a specific wave function.
+\end{itemize}
+%
+\centerline{\bf - There are more problems on the back - }
+%
+\newpage
+%
+\item[2.] Stationary states
+\begin{itemize}
+\item[a)]
+Show first that in a stationary state (in 1D) the probability current density $J(x,t)$ is independent of time. Then use the continuity equation to show that $J(x,t)$ is also independent of $x$.
+\item[b)]
+Show that two stationary states for {\it unequal} energies $E_1$ and $E_2$
+are orthogonal.\\ 
+Reminder: Two states $\Psi_1(x,t)$ and $\Psi_2(x,t)$ are called orthogonal, if\\ $\int\limits_{-\infty}^{\infty} {\Psi^*_1}(x,t){\Psi_2(x,t)}dx = 0$.\\
+{\it Hint: The statement is true for states with unequal energies only. So, at some point the energies $E_1$ and $E_2$, or the energy difference $E_1-E_2$, need to show up in your derivation.}
+\end{itemize}
+%
+\vspace*{0.5cm}
+%
+\item[3.] A reverse problem\\
+Usually we seek for wave functions which solve the Schr\"odinger equation for a given potential. It however works in the reverse way as well. Consider a one-dimensional particle which is confined within the region $0\le x\le a$ whose wave function given by
+\begin{displaymath}
+\Psi(x,t)= A \sin(\pi x/a)\exp(-i\omega t).
+\end{displaymath}
+\begin{itemize}
+\item[a)]
+Use the Schr\"odinger equation to find the potential $V(x)$.
+\item[b)]
+Calculate the probability of finding the particle in the interval $a/4 \le x \le 3a/4$.
+\end{itemize}
+%
+\vspace*{0.5cm}
+%
+\item[4.] Superposition of stationary states\\
+Let $\chi_1(x)$ and $\chi_2(x)$ be normalized stationary states (energy eigenfunctions)
+of an one-dimensional system for unequal energies $E_1$ and $E_2$. Let $\Psi(x,t)$ be the wave function of the system,
+and suppose that at $t=0$ it is given by
+\begin{displaymath}
+\Psi(x,t=0) =
+A\left[ \chi_1(x) + (1-i)\chi_2(x) \right]
+\end{displaymath}
+\begin{itemize}
+\item[a)]
+Determine $A$ such that $\Psi(x,t=0)$ is normalized.\\
+{\it Hint: The statement proved in problem 2b) will be useful here.}
+\item[b)]
+Write down the wave function $\Psi(x,t)$ at time $t$. Is $\Psi(x,t)$ a stationary state? Explain.
+\item[c)]
+Does the probability density $|\Psi(x,t)|^2$ vary with time?
+\end{itemize}
+
+%
+\end{itemize}
+%
+\end{document}
+

@@ -1,0 +1,136 @@
+\documentclass[11pt]{article}
+
+\usepackage[dvips]{graphicx}
+\usepackage[rflt]{floatflt}
+\usepackage{amsmath,amsthm,amssymb}
+
+\renewcommand{\baselinestretch}{1.0}
+\parindent0em
+\parskip1.5ex plus0.5ex minus0.5ex
+\topmargin-0.8cm
+\oddsidemargin0.2cm
+\textwidth16cm
+\textheight22cm
+\setlength{\unitlength}{1cm}
+%
+\begin{document}
+\thispagestyle{empty}
+
+
+\centerline{\bf PHY 482, HW\#4}
+
+\begin{itemize}
+%
+\item[1.] Superposition of stationary states\\
+The normalized state of a system is given by a superposition of stationary states as:
+\begin{equation}
+\Psi(x,t) = \sum\limits_{n=1}^{\infty} c_n \chi_n(x) \exp(-iE_n t)
+\end{equation}
+\begin{itemize}
+\item[a)]
+Show that from the normalization of $\Psi(x,t)$ follows that
+\begin{equation}
+\sum\limits_{n=1}^{\infty} |c_n|^2 = 1
+\end{equation}
+Give a physical interpretation of Eq.\ (2).
+\item[b)]
+Solve Eq.\ (1) for $c_5$.
+\end{itemize}
+%
+\vspace*{0.25cm}
+%
+\item[2.] Energy measurement I\\
+A system is initially in the state
+\begin{displaymath}
+\Psi(x,t=0) =
+\frac{1}{\sqrt{7}}\left(
+\sqrt{2}\chi_1(x)
++\sqrt{3}\chi_2(x)
+-i\chi_3(x)
++\chi_4(x)
+\right)
+\end{displaymath}
+where $\chi_n(x)$ are eigenstates of the system's Hamiltonian such that ${\hat H}\chi_n(x)=n^2 E_0\chi_n(x)$
+\begin{itemize}
+\item[a)]
+Is $\Psi(x,t)$ normalized for $t>0$?
+\item[b)]
+If the energy of state is measured, what values will be obtained and with what probabilities?
+\item[c)]
+Calculate the expectation value of the total energy of the system.
+\item[d)]
+Suppose that a measurement yields $4E_0$, write down the wave function immediately after the measurement.
+\end{itemize}
+%
+\vspace*{0.25cm}
+%
+\item[3.] Energy measurement II\\
+Consider a particle in an (1D) infinite square well of width $a$. The normalized energy eigenstates of this system are given by \begin{displaymath}
+\Psi_n(x,t=0) = \sqrt{\frac{2}{a}} \sin\left(\frac{n\pi x}{a}\right)
+\end{displaymath}
+and the corresponding energy eigenvalues are given by $E_n =\frac{n^2\pi^2\hbar^2}{2ma^2}$.
+\\ \\
+%
+\centerline{- Problem continues on the back -}
+\newpage
+%
+Suppose that the wave function of the particle at time $t=0$ is given by
+\begin{displaymath}
+\Psi(x,t=0) =
+\begin{cases}
+A\frac{x}{a}, &\mbox{if}\quad 0\le x\le \frac{a}{2}\\
+A\left(1-\frac{x}{a}\right), &\mbox{if}\quad \frac{a}{2} < x \le a\\
+0, &\mbox{else}
+\end{cases}
+\end{displaymath}
+where $A = \sqrt{\frac{12}{a}}$ such that $\int\limits_{-\infty}^{\infty} |\Psi(x,t=0)|^2 dx = 1$. Calculate the probability that the measurement of the energy yields the eigenvalue $E_3$.\\
+{\it (Hint: Problem 1b) and its solution should be useful here.)}
+%
+\vspace*{0.25cm}
+%
+\item[4.] Parseval's theorem for Fourier transforms\\
+For a function $f(x)$ its Fourier transform $F(k)$ is defined by
+\begin{displaymath}
+F(k) = \frac{1}{\sqrt{2\pi}}\int\limits_{-\infty}^{\infty}f(x)\exp(-ikx) dx
+\end{displaymath}
+while
+\begin{displaymath}
+f(x) = \frac{1}{\sqrt{2\pi}}\int\limits_{-\infty}^{\infty}F(k)\exp(ikx) dk
+\end{displaymath}
+is called the inverse Fourier transform of $F(k)$.
+Prove Parseval's theorem
+\begin{displaymath}
+\int\limits_{-\infty}^{\infty} |f(x)|^2 dx = \int\limits_{-\infty}^{\infty} |F(k)|^2 dk
+\end{displaymath}
+(This theorem tells you that if a function $f(x)$ is normalized, then its Fourier transform $F(k)$ is normalized too and vice versa.)
+%
+\vspace*{0.25cm}
+%
+\item[5.] Some physics with plane waves\\
+Consider the plane wave characterized by a positive constant $k_0$
+\begin{equation}\label{plane}
+\Psi(x,t) = A \exp(ik_0x-i\hbar k_0^2t/2m)
+\end{equation}
+(Note: You do not have to determine $A$ for solving the following problems.)
+\begin{itemize}
+\item[a)]
+Find the Fourier transform $\Phi(k,t)$ of this wavefunction. Describe in
+words: What is the result telling you about plane waves?
+\item[b)]
+Find the probability current
+\begin{displaymath}
+J(x,t) = \frac{i\hbar}{2m}\left(\Psi\frac{\partial \Psi^*}{\partial x}
+-\Psi^*\frac{\partial\Psi}{\partial x}\right)
+\end{displaymath}
+for the wavefunction given in Eq.\ (\ref{plane}).
+Try to simplify your result as much as
+possible and give a brief interpretation of the expression you get.
+\item[c)] If you flip the sign of $k_0$, describe what has changed physically
+and mathematically about the state. How is this reflected in the results
+from part b)?
+\end{itemize}
+%
+\end{itemize}
+%
+\end{document}
+

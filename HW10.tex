@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+
+\usepackage[dvips]{graphicx}
+\usepackage[rflt]{floatflt}
+\usepackage{amsmath,amsthm,amssymb}
+
+\renewcommand{\baselinestretch}{1.0}
+\parindent0em
+\parskip1.5ex plus0.5ex minus0.5ex
+\topmargin-0.8cm
+\oddsidemargin0.2cm
+\textwidth16cm
+\textheight22cm
+\setlength{\unitlength}{1cm}
+%
+\begin{document}
+\thispagestyle{empty}
+
+\centerline{\bf PHY 482,  HW\#10}
+
+\begin{itemize}
+%
+\item[1.] Angular momentum operators\\
+The $x, y$, and $z$ components of the orbital angular momentum operator expressed in spherical coordinates are:
+\begin{eqnarray*}
+{\hat L}_x &=& -i\hbar \left(-\sin\phi\frac{\partial}{\partial \theta} - \cos\phi\cot\theta\frac{\partial}{\partial\phi} \right)\\
+{\hat L}_y &=& -i\hbar \left(\cos\phi\frac{\partial}{\partial \theta} - \sin\phi\cot\theta\frac{\partial}{\partial\phi} \right)\\
+{\hat L}_z &=& -i\hbar \frac{\partial}{\partial \phi}
+\end{eqnarray*}
+\begin{itemize}
+\item[a)]
+Prove the above expression for ${\hat L}_z$ by showing it is equivalent to the expression for ${\hat L}_z$ in Cartesian coordinates.\\
+({\it Hint: Work backwards from the desired result and use the chain rule.})
+\item[b)]
+Find and simplify the generalized uncertainty relation between ${\hat L}_z$ and the angle $\phi$. What does the result remind you of?
+\item[c)]
+Show that
+\begin{displaymath}
+{\hat L}_{\pm} = {\hat L}_x \pm i{\hat L}_y = \pm \hbar \exp(\pm i\phi)\left(\frac{\partial}{\partial \theta}\pm i\cot\theta\frac{\partial}{\partial\phi} \right)
+\end{displaymath}
+and
+\begin{displaymath}
+{\hat L}^2 = {\hat L}_x^2 + {\hat L}_y^2 + {\hat L}_z^2 =
+-\hbar^2 \left[\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\phi^2}\right]\, .
+\end{displaymath}
+\end{itemize}
+%
+\vspace*{0.5cm}
+%
+\item[2.] Commutators with angular momentum operators
+\begin{itemize}
+\item[a)] Work out the following commutators:
+\begin{displaymath}
+[{\hat L}_z,{\hat p}_x] = i\hbar {\hat p}_y, \qquad [{\hat L}_z,{\hat p}_y] = -i\hbar {\hat p}_x, \qquad [{\hat L}_z,{\hat p}_z] = 0,
+\end{displaymath}
+\item[b)] Use the results obtained in part a) to evaluate the commutator $[{\hat L}_z,{\hat p}^2]$.
+\item[c)] Use that $[{\hat L_x},{\hat p}^2] = [{\hat L_y},{\hat p}^2] = [{\hat L}_z,{\hat p}^2]$ (you do {\it not} have to show these relations) and the result obtained in part b) to show that the Hamiltonian $H = (p^2/2m) + V$ commutes with ${\hat L}^2$ and ${\hat L_z}$, provided that $V = V(r)$ depends only on $r$.
+\end{itemize}
+%
+\vspace*{0.5cm}
+\centerline{\bf - Please note: There is another problem on the next page -}
+\newpage
+%
+\item[3.] Superposition of orbital angular momentum eigenstates\\
+Consider a system which is initially in the state
+\begin{displaymath}
+\Psi(\theta,\phi) = \frac{1}{\sqrt{5}} Y_{1,-1}(\theta,\phi) + \sqrt{\frac{3}{5}} Y_{1,0}(\theta,\phi) + A Y_{1,1}(\theta,\phi)
+\end{displaymath}
+where $A$ is a {\it real} number.\\
+($Y_{l,m}$ are the spherical harmonics and as we have shown / will show in class the simultaneous eigenfunctions of ${\hat L}^2$ and ${\hat L}_z$.)
+\begin{itemize}
+\item[a)] Find $A$ such that the state is normalized. Is your answer unique? Explain.
+\item[b)] Find $<\Psi|{\hat L}_+|\Psi>$.\\ 
+    {\it (Hint: We have shown / will show in class, that ${\hat L}_{\pm} Y_{l,m} \propto Y_{l,m\pm 1}$. For the problem you need the proportionality factor. It is ${\hat L}_{\pm} Y_{l,m} = C_{l,m}^{\pm} Y_{l,m\pm 1}$ with
+    $C_{l,m}^{\pm} = \hbar \sqrt{l(l+1) - m(m\pm 1)}$.)}
+\item[c)] If ${\hat L}_z$ is measured what values will one obtain and with what probabilities? What is the expectation value of ${\hat L}_z$?
+\item[d)] Assume that we measure ${\hat L}_z$ and the result of the measurement is $-\hbar$. What is the state of the system {\it after} the measurement? Determine the product $\Delta L_x \Delta L_y$ {\it after} the measurement.
+\end{itemize}
+%
+\end{itemize}
+\end{document}
+

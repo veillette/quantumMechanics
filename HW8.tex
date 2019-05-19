@@ -1,0 +1,125 @@
+\documentclass[11pt]{article}
+
+\usepackage[dvips]{graphicx}
+\usepackage[rflt]{floatflt}
+\usepackage{amsmath,amsthm,amssymb}
+
+\renewcommand{\baselinestretch}{1.0}
+\parindent0em
+\parskip1.5ex plus0.5ex minus0.5ex
+\topmargin-0.8cm
+\oddsidemargin0.2cm
+\textwidth16cm
+\textheight22cm
+\setlength{\unitlength}{1cm}
+%
+\begin{document}
+\thispagestyle{empty}
+
+\centerline{\bf PHY 482, HW\#8}
+
+\begin{itemize}
+%
+\item[1.] Vectors and vector spaces
+\begin{itemize}
+\item[a)] 
+    Consider ordinary 3D vectors $\vec{A} = A_x \hat{x} + A_y \hat{y} + A_z \hat{z}$ (with complex components) together with the set of scalars.  For each of the following three cases, find out whether it constitutes a vector space.  If so, what is its dimension?  If not, why not?
+    \\ 
+    (i) The subset of all vectors with $A_z = 0$.
+    \\
+    (ii) The subset of all vectors with $A_z = 1$.
+    \\
+    (iii) The subset of all vectors whose components are all equal.
+\item[b)]
+    Does the set of all $2 \times 2$ matrices form a vector space? Assume the usual rules for matrix addition and multiplication by a scalar:
+    \begin{displaymath}
+    \left( \begin{array}{cc}
+        a   &   b\\
+        c   &   d\\
+    \end{array} \right)
+    +
+    \left( \begin{array}{cc}
+        e   &   f\\
+        g   &   h\\
+    \end{array} \right)
+    =
+    \left( \begin{array}{cc}
+        a+e   &   b+f\\
+        c+g   &   d+h\\
+    \end{array} \right)
+    \quad
+    \text{and}
+    \quad
+    \alpha
+    \left( \begin{array}{cc}
+        a   &   b\\
+        c   &   d\\
+    \end{array} \right)
+    =
+    \left( \begin{array}{cc}
+        \alpha a   &   \alpha b\\
+        \alpha c   &   \alpha d\\
+    \end{array} \right)
+    \end{displaymath}
+    If it does not form a vector space, why not? If it does, state the dimensionality and give an example of a set of basis vectors.
+\item[c)] 
+    Does the set of all functions $f(x)$ defined on the range $0 < x < 1$ that vanish at $x=0$ and $x=1$ together with the set of scalars form a vector space?  If not, why not? If it does, state the dimensionality.
+\end{itemize}
+%
+\vspace*{0.1cm}
+%
+\item[2.] Properties of Hermitian operators
+\begin{itemize}
+\item[a)] Show that the sum of two Hermitian operators is a Hermitian operator.
+\item[b)] Suppose that $\hat{A}$ is a Hermitian operator and $\alpha$ is a number. Under what condition on $\alpha$ is $\alpha\hat{A}$ a Hermitian operator?
+\item[c)] When is the product of two Hermitian operators a Hermitian operator?
+\item[d)] Show that the Hamilton operator ${\hat H} = -\frac{\hbar^2}{2m}\frac{d^2}{dx^2} + V(x)$ is a Hermitian operator.
+\end{itemize}
+%
+\vspace*{0.1cm}
+\item[3.] Projection operators\\
+An operator is said to be {\it idempotent}, if ${\hat P}^2 = {\hat P}$. If, in addition, ${\hat P}$ is an Hermitian operator, then ${\hat P}$ is called a projection operator.
+\begin{itemize}
+\item[a)] 
+Show that $\left({\hat I} - {\hat P}\right)$ is a projection operator, if ${\hat P}$ is a projection operator (${\hat I}$ is the identity operator with ${\hat I} |\Psi\rangle = |\Psi\rangle$).
+\item[b)]
+Assume that a state vector $|\Psi \rangle$ can be written as 
+\begin{displaymath}
+|\Psi \rangle = |\Phi\rangle + |\chi\rangle
+\end{displaymath}
+with $|\Phi\rangle = {\hat P}|\Psi \rangle$ and $|\chi\rangle> = \left({\hat I} - {\hat P}\right)|\Psi \rangle$ where ${\hat P}$ is a projection operator and ${\hat I}$ is the identity operator. Show that $|\Phi\rangle$ and $|\chi\rangle$ are orthogonal.\\
+(In other words, any state can be written in terms of two orthogonal states by means of a projection operator.) 
+\end{itemize}
+%
+\centerline{\bf - There is another problem on the back -}
+\newpage
+%
+\item[4.] Hermitian conjugate (or adjoint) of an operator\\
+The Hermitian conjugate or Hermitian adjoint of an operator ${\hat A}$ is denoted as ${\hat A}^\dagger$ and 
+is defined by (see Griffiths, Eq.\ 3.20)
+\begin{displaymath}
+\langle f | {\hat A}g \rangle = \langle {\hat A}^\dagger f | g\rangle
+\end{displaymath}
+\begin{itemize}
+\item[a)]
+In other books you find instead the following definition of the Hermitian conjugate:
+\begin{displaymath}
+\langle f | {\hat A}^\dagger g \rangle = \langle {\hat A} f | g\rangle
+\end{displaymath}
+Show that this definition is equivalent to the one above.
+\item[b)]
+Show that a Hermitian operator is self-adjoint, i.e.\ ${\hat A}^\dagger = {\hat A}$.
+\item[c)]
+Show the following properties of Hermitian conjugates of operators:\\
+(i) $\left( {\hat A}^\dagger \right)^{\dagger} = {\hat A}$, 
+(ii) $\left( \alpha {\hat A} \right)^\dagger = \alpha^* {\hat A}^\dagger$, and 
+(iii) $\left({\hat A}{\hat B}\right)^\dagger = {\hat B}^\dagger {\hat A}^\dagger$
+\item[d)]
+Find the Hermitian conjugates of $i$, $\partial/\partial x$ and the raising operator ${\hat a}_+$.
+\item[e)]
+An operator ${\hat A}$ can be represented by a matrix $(A)_{ij}$. Show that the Hermitian conjugate of ${\hat A}$ is then represented by $(A^*)_{ji}$.
+\end{itemize}
+%
+\end{itemize}
+\end{document}
+

@@ -1,0 +1,138 @@
+\documentclass[11pt]{article}
+
+\usepackage[dvips]{graphicx}
+\usepackage[rflt]{floatflt}
+\usepackage{amsmath,amsthm,amssymb}
+
+\renewcommand{\baselinestretch}{1.0}
+\parindent0em
+\parskip1.5ex plus0.5ex minus0.5ex
+\topmargin-0.8cm
+\oddsidemargin0.2cm
+\textwidth16cm
+\textheight22cm
+\setlength{\unitlength}{1cm}
+%
+\begin{document}
+\thispagestyle{empty}
+
+
+\centerline{\bf PHY 482,  HW\#2}
+
+\begin{itemize}
+%
+\item[1.] A wavefunction
+\begin{itemize}
+%\item[a)]
+%Using the known integral (you have used/calculated it in the previous HW set)
+%\begin{equation}\label{int}
+%\int_{-\infty}^{\infty}exp(-az^2)dz =\sqrt{\frac{\pi}{a}}
+%\end{equation}
+%find an expression for the integral $\int_{-\infty}^{\infty}z^2exp(-az^2)dz$ by differentiating equation (\ref{int})
+%with respect to $a$.\\
+%({\it Note: This is a very useful trick (not only) in quantum mechanics.})
+\item[a)]
+Consider the following wavefunction for a particle of mass $m$
+\begin{equation}
+\Psi(x,t) = A \left[\exp(-i\alpha\hbar t/m)+\beta x\exp(-3i\alpha\hbar t/m)\right]\exp(-\alpha x^2)
+\end{equation}
+where $\alpha$ and $\beta$ are real constants. Determine $A$ such that the wave function is normalized. Is the answer unique? Explain.\\
+({\it Hint: You'll find the solutions to problem 3b) of the last HW set helpful here. Also, think about whether you can argue some terms are zero without explicitly calculating them.})
+\item[b)]
+What is the probability density for this wavefunction? Is the probability density independent of time?
+\item[c)]
+What is the expectation value $\langle x \rangle$? What kind of motion is the average value of the particle's position executing?
+\end{itemize}
+%
+\item[2.] Thinking about the Schr\"odinger equation
+\begin{itemize}
+\item[a)]
+Show that if $\Psi_1(x,t)$ and $\Psi_2(x,t)$ are solutions of the Schr\"odinger equation
+\begin{equation}\label{schroed}
+i\hbar \frac{\partial}{\partial t} \Psi(x,t) =
+\left( -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + V(x,t) \right) \Psi(x,t)
+\end{equation}
+then the superposition $\Psi(x,t) = \Psi_1(x,t) + \Psi_2(x,t)$ is a solution too. 
+\item[b)]
+The composite Schr\"odinger equation
+\begin{equation}\label{comp}
+i\hbar \frac{\partial}{\partial t} \Psi(x_1,x_2,t) =
+\left[
+-\frac{\hbar^2}{2m}\left(\frac{\partial^2}{\partial x_1^2} + \frac{\partial}{\partial x_2^2}\right) + V_1(x_1,t) +V_2(x_2,t)
+\right]
+\Psi(x_1,x_2,t)
+\end{equation}
+describes a system of two independent particles.
+Use the interpretation that $|\Psi(x_1,x_2,t)|^2$ is a probability density to show that the state of such a system must be given in the product form $\Psi(x_1,x_2,t) = \Psi_1(x_1,t)\Psi_2(x_2,t)$.\\[0.5cm]
+%
+\centerline{\bf - This problem continues on the back - }
+%
+\pagebreak
+%
+\item[c)]
+Consider now two Schr\"odinger equations with different potential terms $V_1(x_1,t)$ and $V_2(x_2,t)$
+\begin{eqnarray}\label{one}
+i\hbar \frac{\partial}{\partial t} \Psi_1(x_1,t) =
+\left( -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x_1^2} + V_1(x_1,t) \right) \Psi_1(x_1,t)
+\\ \label{two}
+i\hbar \frac{\partial}{\partial t} \Psi_2(x_2,t) =
+\left( -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x_2^2} + V_2(x_2,t) \right) \Psi_2(x_2,t)
+\end{eqnarray}
+Show that if $\Psi_1(x_1,t)$ is a solution of equation $(\ref{one}$) and $\Psi_2(x_2,t)$ is a solution of equation $(\ref{two})$, then
+the product form $\Psi(x_1,x_2,t) = \Psi_1(x_1,t)\Psi_2(x_2,t)$ is a solution of the Schr\"odinger equation
+composed of the two equations above, namely
+\begin{equation}\label{comp}
+i\hbar \frac{\partial}{\partial t} \Psi(x_1,x_2,t) =
+\left[
+-\frac{\hbar^2}{2m}\left(\frac{\partial^2}{\partial x_1^2} + \frac{\partial}{\partial x_2^2}\right) + V_1(x_1,t) +V_2(x_2,t)
+\right]
+\Psi(x_1,x_2,t)
+\end{equation}
+({\it Note: This is the same equation as in part b).})
+\item[d)]
+Replace in part c) all time derivatives $\partial/\partial t$ by $\partial^2/\partial t^2$ and show that in this case
+the product form is {\it not} solution of the composite equation.
+\item[e)]
+Review your answers and conclusions from parts b) to d) and argue why the time derivative in the Schr\"odinger equation should be $\partial/\partial t$ and {\it not} $\partial^2/\partial t^2$.
+\end{itemize}
+%
+\item[3.] Phase factors\\
+Let $\Psi(x,t)$ be a solution of the (one-dimensional) Schr\"odinger equation
+\begin{equation}
+i\hbar \frac{\partial}{\partial t}\Psi(x,t) =
+\left[-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V(x,t)\right]
+\Psi(x,t).
+\end{equation}
+Suppose you add a constant $V_0$, which is independent of $x$ and $t$,
+to the potential energy term $V(x,t)$.
+\begin{itemize}
+\item[a)] Show that the solution of the new Schr\"odinger equation is given by\\
+$\Phi(x,t) = \Psi(x,t) \exp(-iV_0t/\hbar)$.
+\item[b)] What effect does this time-dependent phase factor have on the
+probability density $|\Phi(x,t)|^2$ and the expectation value of the position $\langle x \rangle$?
+Explain.
+\end{itemize}
+%
+\item[4.] Current density\\
+In class we have shown that the continuity equation for probability is given by
+\begin{equation}
+\frac{d}{dt}|\Psi({\bf r},t)|^2 +{\bf \nabla} \cdot{\bf J}({\bf r},t) = 0.
+\end{equation}
+In deriving the equation we have assumed that the potential $V({\bf r},t)$ is a real
+quantity.
+\begin{itemize}
+\item[a)]
+Prove that if $V({\bf r},t)$ would be complex the continuity equation would become
+\begin{equation}\label{imag}
+\frac{d}{dt}|\Psi({\bf r},t)|^2 +{\bf \nabla} \cdot{\bf J}({\bf r},t) =
+\frac{2}{\hbar} Im(V({\bf r},t)) |\Psi({\bf r},t)|^2
+\end{equation}
+\item[b)]
+How do you interpret the term on the right hand side of equation (\ref{imag})? Discuss in particular
+the cases $Im(V({\bf r},t))>0$ and  $Im(V({\bf r},t))<0$.
+\end{itemize}
+%
+\end{itemize}
+%
+\end{document}
+
